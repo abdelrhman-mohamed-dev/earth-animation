@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #000;
+}
+
+/* Centers the entire container in the middle of the screen */
+.screen-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: #000; /* Optional, adds background color */
+}
+
+/* Earth and ellipses container */
+.earth-container {
+  position: relative;
+  width: 300px; /* Adjust based on image size */
+  height: 300px; /* Adjust based on image size */
+}
+
+/* Earth image */
+.earth {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+}
+
+/* Ellipses styles */
+.ellipse {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 20;
+  transform: translate(-50%, -50%);
+}
+
+.ellipse-1 {
+  width: 376px;
+  height: 100%;
+}
+
+.ellipse-2 {
+  width: 300px;
+  height: 300px;
+}
+
+.ellipse-3 {
+  width: 300px;
+  height: 360px;
+}
+
+@keyframes appear-disappear {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+/* Animation for each ellipse with different delays */
+.animate-ellipse-1 {
+  animation: appear-disappear 2s ease-in-out infinite 5s;
+}
+
+.animate-ellipse-2 {
+  animation: appear-disappear 4s ease-in-out infinite 3s; /* Delays to stagger */
+}
+
+.animate-ellipse-3 {
+  animation: appear-disappear 5s ease-in-out infinite 4s; /* Delays to stagger */
+}
