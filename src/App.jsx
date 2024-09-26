@@ -1,6 +1,5 @@
 
 import './App.css'
-import HoverCard from './components/hover-card'
 
 function App() {
 

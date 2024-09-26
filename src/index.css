@@ -41,39 +41,50 @@ body {
 }
 
 .ellipse-1 {
+  opacity: 0;
   width: 376px;
   height: 100%;
 }
 
 .ellipse-2 {
+  top: 49%;
+  left: 50%;
   width: 300px;
   height: 300px;
 }
 
 .ellipse-3 {
-  width: 300px;
+  opacity: 0;
+  top: 50%;
+  left: 48%;
+  width: 360px;
   height: 360px;
 }
 
 @keyframes appear-disappear {
-  0%,
-  100% {
-    opacity: 0;
+  0% {
+    opacity: 0; /* Hidden at the start */
   }
-  50% {
-    opacity: 1;
+  25% {
+    opacity: 0.5; /* Fully visible */
+  }
+  75% {
+    opacity: 1; /* Stay visible */
+  }
+  100% {
+    opacity: 0; /* Hidden at the end */
   }
 }
 
 /* Animation for each ellipse with different delays */
 .animate-ellipse-1 {
-  animation: appear-disappear 2s ease-in-out infinite 5s;
+  animation: appear-disappear 4s ease-in-out infinite 1s; /* Delay the start for a smoother effect */
 }
 
 .animate-ellipse-2 {
-  animation: appear-disappear 4s ease-in-out infinite 3s; /* Delays to stagger */
+  animation: appear-disappear 3s ease-in-out infinite 1s; /* Add some delay */
 }
 
 .animate-ellipse-3 {
-  animation: appear-disappear 5s ease-in-out infinite 4s; /* Delays to stagger */
+  animation: appear-disappear 4s ease-in-out infinite 1s; /* Add some delay */
 }
